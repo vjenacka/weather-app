@@ -1,0 +1,24 @@
+.card{
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    color: #888;
+}
+.card img{
+    width: 30%;
+    margin: 0 auto;
+}
+.card p{
+    margin: 10px 0;
+}
+.card span{
+    color: #222;
+}
+/* .card-focused{
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    color: #888;
+    border: 1px solid #666;
+    background: #777;
+} */
