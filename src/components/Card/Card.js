@@ -7,10 +7,10 @@ import HourlyForcast from '../HourlyForcast/HourlyForcast';
 export default function Card({ date, hourlyForcast }) {
   const cssClass = date.active ? 'card-active' : 'card';
   return (
-    <div>
+    <div className='card-container'>
       <div className={cssClass} onClick={() => { hourlyForcast(date.id) }}>
         <p>{date.day}</p>
-        <img src={img} alt="weather image" />
+        <img src='http://openweathermap.org/img/w/10d.png' alt="weather image" />
         <p><span>{date.highestTemp}&deg;</span> {date.lowestTemp}&deg;</p>
       </div>
       <HourlyForcast active={date.active} hours={date.hours}/>

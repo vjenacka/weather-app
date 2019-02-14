@@ -1,12 +1,11 @@
+.card-container{
+    width: 100%;
+}
 .card{
     display: inline-block;
-    margin: 0 20px;
+    width: 100%;
     text-align: center;
     color: #888;
-}
-.card img{
-    width: 40%;
-    margin: 0 auto;
 }
 .card p{
     margin: 10px 0;
@@ -16,15 +15,11 @@
 }
  .card-active{
     display: inline-block;
-    margin: 0 20px;
+    width: 100%;
     text-align: center;
     color: #888;
     border: 1px solid #DCDCDC;
     background: #F8F8F8;
-}
-.card-active img{
-    width: 40%;
-    margin: 0 auto;
 }
 .card-active p{
     margin: 10px 0;
