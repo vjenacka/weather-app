@@ -14,11 +14,21 @@
 .card span{
     color: #222;
 }
- .card-focused{
-    width: 10%;
-    margin: 0 auto;
+ .card-active{
+    display: inline-block;
+    margin: 0 20px;
     text-align: center;
     color: #888;
     border: 1px solid #DCDCDC;
     background: #F8F8F8;
+}
+.card-active img{
+    width: 40%;
+    margin: 0 auto;
+}
+.card-active p{
+    margin: 10px 0;
+}
+.card-active span{
+    color: #222;
 } 
