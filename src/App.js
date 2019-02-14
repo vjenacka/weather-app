@@ -6,7 +6,7 @@ class App extends Component {
     super(props);
     this.state= {
       forcast:[
-        { id: 1, day: 'Mon', highestTemp: 20, lowestTemp: 10 , active: true},
+        { id: 1, day: 'Mon', highestTemp: 20, lowestTemp: 10 , active: true, hours:[23,33,40,14,15]},
         { id: 2, day: 'Tue', highestTemp: 30, lowestTemp: 20, active: false },
         { id: 3, day: 'Wed', highestTemp: 40, lowestTemp: 30, active: false},
         { id: 4, day: 'Thu', highestTemp: 50, lowestTemp: 40, active: false },
@@ -15,7 +15,15 @@ class App extends Component {
     }
   }
   hourlyForcast= id =>{
-    console.log(id);
+    const newForcast= this.state.forcast.map( day =>{
+      if(day.id === id){
+        day.active = !day.active;
+      }
+      return day;
+    })
+    this.setState({
+      forcast: newForcast
+    })
   }
   render() {
     return (
