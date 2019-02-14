@@ -1,11 +1,11 @@
 .card{
-    width: 30%;
+    width: 10%;
     margin: 0 auto;
     text-align: center;
     color: #888;
 }
 .card img{
-    width: 30%;
+    width: 40%;
     margin: 0 auto;
 }
 .card p{
@@ -14,11 +14,11 @@
 .card span{
     color: #222;
 }
-/* .card-focused{
-    width: 30%;
+ .card-focused{
+    width: 10%;
     margin: 0 auto;
     text-align: center;
     color: #888;
-    border: 1px solid #666;
-    background: #777;
-} */
+    border: 1px solid #DCDCDC;
+    background: #F8F8F8;
+} 

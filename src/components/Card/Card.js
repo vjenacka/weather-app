@@ -4,7 +4,7 @@ import './Card.css';
 
 export default function Card() {
   return (
-    <div className='card card-focused'>
+    <div className='card'>
         <p>Wed</p>
         <img src={img} alt="weather image"/>
         <p><span>60&deg;</span> 70&deg;</p>
