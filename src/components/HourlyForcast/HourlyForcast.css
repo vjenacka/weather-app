@@ -1,0 +1,14 @@
+.hourly-forcast{
+    background-color: #bcaaa4;
+    margin-top: 100px;
+}
+.hourly-forcast ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.hourly-forcast li{
+    margin: 0 20px;
+    padding: 10px;
+    color: #eee;
+}

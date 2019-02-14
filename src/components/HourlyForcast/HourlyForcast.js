@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './HourlyForcast.css';
 
-export default function HourlyForcast({active,hours}) {
-    const hrForcastDiv=hours.map(hour =>{
-        return (
-            <p>{hour}</p>
-        )
-    })
-    const renderActive= active? (
-        <div>
-            {hrForcastDiv}
+export default function HourlyForcast({ active, hours }) {
+    const hourlyDiv = hours.map((hour, index) => {
+        return <li key={'hour' + index}>{index + 1}h :{hour}&deg;</li>
+    });
+    const renderActive = active ? (
+        <div className='hourly-forcast'>
+            <ul>
+                {hourlyDiv}
+            </ul>
         </div>
     ) : null;
     return (
