@@ -6,11 +6,11 @@ class App extends Component {
     super(props);
     this.state= {
       forcast:[
-        { day: 'Mon', highestTemp: 10, lowestTemp: 20 },
-        { day: 'Tue', highestTemp: 20, lowestTemp: 30 },
-        { day: 'Wed', highestTemp: 30, lowestTemp: 40 },
-        { day: 'Thu', highestTemp: 40, lowestTemp: 50 },
-        { day: 'Fri', highestTemp: 50, lowestTemp: 60 }
+        { day: 'Mon', highestTemp: 20, lowestTemp: 10 },
+        { day: 'Tue', highestTemp: 30, lowestTemp: 20 },
+        { day: 'Wed', highestTemp: 40, lowestTemp: 30 },
+        { day: 'Thu', highestTemp: 50, lowestTemp: 40 },
+        { day: 'Fri', highestTemp: 60, lowestTemp: 50 }
       ]
     }
   }
