@@ -14,6 +14,13 @@ class App extends Component {
       ]
     }
   }
+  //call the api and get 5 day/3 hour forcast
+  APICall = async () => {
+    const API_KEY= 'a68987c5b03a0c8ce52ac5e15514eb33';
+    const data = await fetch('https://api.openweathermap.org/data/2.5/forecast?q=London,uk&units=metric&appid=a68987c5b03a0c8ce52ac5e15514eb33')
+
+  }
+  //changes the active state of the component that renders the hourly forcast
   hourlyForcast= id =>{
     const newForcast= this.state.forcast.map( day =>{
       if(day.id === id){

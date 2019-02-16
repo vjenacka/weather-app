@@ -1,5 +1,4 @@
 import React from 'react';
-import img from './download.png';
 import hourlyForcast from '../HourlyForcast/HourlyForcast';
 import './Card.css';
 import HourlyForcast from '../HourlyForcast/HourlyForcast';
