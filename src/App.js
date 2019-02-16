@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import Collection from './components/Collection/Collection';
 
+
+/* STUFF TO DO 
+-split the code in to multiple functions
+-try removing the full date and just make the time show
+-check for bugs
+-fetch the 5 day data
+*/
+
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -23,22 +32,33 @@ class App extends Component {
       return response.json()
     })
     .then(JSONData =>{
+      console.log(JSONData);
       //goes through the list and gets the date and the temp of the current time
       const formatedData = JSONData.list.map(item =>{
         return {
-          date: item.dt_txt,
+          day: this.dayConverter(item.dt),
+          hour: this.hourConverter(item.dt),
           temp: item.main.temp
         }
       });
+      console.log(formatedData);
       const wtf = this.state.forcast.map(ele =>{
         ele.hours=formatedData.slice(0,7);
         return ele;
       })
-      console.log(wtf);
       this.setState({
         forcast:wtf
       })
     })
+  }
+  ///format data function
+  hourConverter=(UNIX_timestamp) => {
+    var a = new Date(UNIX_timestamp * 1000);
+    return a.getHours();
+  }
+  dayConverter=(UNIX_timestamp) => {
+    var a = new Date(UNIX_timestamp * 1000);
+    return a.getDate();
   }
   //test function
   /* test = ()=>{
