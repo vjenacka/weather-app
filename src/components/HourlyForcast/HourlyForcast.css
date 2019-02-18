@@ -1,5 +1,5 @@
 .hourly-forcast{
-    background-color: #ffb74d;
+    border: 1px solid gray;
     margin-top: 100px;
 }
 .hourly-forcast ul{
@@ -7,8 +7,14 @@
     padding: 0;
     list-style: none;
 }
-.hourly-forcast li{
-    margin: 0 20px;
-    padding: 10px;
-    color: #eee;
+.hourly-forcast div{
+    display:flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ddd;
+}
+.hr-Temp{
+    background-color: gray;
+    padding: 0 7px;
+    border-radius: 10px;
+    color: #fff;
 }
