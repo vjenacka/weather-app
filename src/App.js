@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Collection from './components/Collection/Collection';
 import returnedData from './FormatData';
+import { BrowserRouter,Route, Link } from 'react-router-dom';
+import NewHourlyForcast from './components/HourlyForcast/NewHourlyForcast';
 
 /* STUFF TO DO 
--popravi malo css
 -ugradi rute
 -pokusaj stavit vx(oj Boze)
 */
@@ -42,11 +43,35 @@ class App extends Component {
       forcast: newForcast
     })
   }
+
+  MyCollection = (props) =>{
+    return(
+      <Collection 
+      forcast={this.state.forcast} 
+      hourlyForcast={this.hourlyForcast} 
+      {...props}
+      />
+    )
+  }
+  MyNewHourlyForcast= (props) =>{
+    return(
+      <NewHourlyForcast
+        forcast={this.state.forcast}
+        {...props}
+      />
+    )
+  }
+
   render() {
     return (
-      <div className="App">
-        <Collection forcast={this.state.forcast} hourlyForcast={this.hourlyForcast} />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Link to="/">Weather App</Link>
+          <Route exact path='/' render={this.MyCollection}/>
+          {console.log(this.state.forcast)}
+          <Route path='/:day_id' render={this.MyNewHourlyForcast}/>
+        </div>
+      </BrowserRouter>
     );
   }
 }

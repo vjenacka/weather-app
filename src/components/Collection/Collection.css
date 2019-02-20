@@ -3,3 +3,7 @@
     width: 60%;
     margin: 50px auto;
 }
+.collection a{
+    display: inline-block;
+    width: 100%;
+}
