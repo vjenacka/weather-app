@@ -13,17 +13,3 @@
 .card span{
     color: #222;
 }
- .card-active{
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    color: #888;
-    border: 1px solid #DCDCDC;
-    background: #F8F8F8;
-}
-.card-active p{
-    margin: 10px 0;
-}
-.card-active span{
-    color: #222;
-} 

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import Collection from './components/Collection/Collection';
 import returnedData from './FormatData';
-import { BrowserRouter,Route, Link } from 'react-router-dom';
-import NewHourlyForcast from './components/HourlyForcast/NewHourlyForcast';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import HourlyForcast from './components/HourlyForcast/HourlyForcast';
+import './App.css'
 
 /* STUFF TO DO 
--ugradi rute
 -pokusaj stavit vx(oj Boze)
 */
-
 
 class App extends Component {
   constructor(props) {
@@ -30,32 +29,19 @@ class App extends Component {
       })
   }
 
-  //changes the active state of the component that renders the hourly forcast
-  hourlyForcast = id => {
-    const newForcast = this.state.forcast.map(day => {
-      if (day.id === id) {
-        day.active = !day.active;
-      }
-      return day;
-    })
-    this.setState({
-      ...this.state,
-      forcast: newForcast
-    })
-  }
-
-  MyCollection = (props) =>{
-    return(
-      <Collection 
-      forcast={this.state.forcast} 
-      hourlyForcast={this.hourlyForcast} 
-      {...props}
+  //renders the component with the Route component tag
+  MyCollection = (props) => {
+    return (
+      <Collection
+        forcast={this.state.forcast}
+        hourlyForcast={this.hourlyForcast}
+        {...props}
       />
     )
   }
-  MyNewHourlyForcast= (props) =>{
-    return(
-      <NewHourlyForcast
+  MyHourlyForcast = (props) => {
+    return (
+      <HourlyForcast
         forcast={this.state.forcast}
         {...props}
       />
@@ -66,10 +52,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Link to="/">Weather App</Link>
-          <Route exact path='/' render={this.MyCollection}/>
-          {console.log(this.state.forcast)}
-          <Route path='/:day_id' render={this.MyNewHourlyForcast}/>
+          <h1>My Weather App</h1>
+          <Switch>
+            <Route exact path='/' render={this.MyCollection} />
+            <Route path='/:day_id' render={this.MyHourlyForcast} />
+          </Switch>
         </div>
       </BrowserRouter>
     );

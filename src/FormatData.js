@@ -28,7 +28,6 @@ const formatData = data => {
       return arr.map((ele,index) =>{
           return {
             id: index+1,
-            actvie: false,
             day: ele[0].day,
             dayInText: ele[0].dayInText,
             hours: ele.map(Objele=>Objele.hour),
