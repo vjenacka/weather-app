@@ -5,10 +5,6 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import HourlyForcast from './components/HourlyForcast/HourlyForcast';
 import './App.css'
 
-/* STUFF TO DO 
--pokusaj stavit vx(oj Boze)
-*/
-
 class App extends Component {
   constructor(props) {
     super(props);
