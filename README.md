@@ -1,1 +1,1 @@
-My React weather app :)
+My React weather app
